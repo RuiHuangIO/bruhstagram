@@ -1,9 +1,9 @@
-import { createStore, compose } from 'redux';
-import { createBrowserHistory } from 'history';
+import { createStore } from 'redux';
 
 // import the root reducer
 import rootReducer from './reducers/index';
 
+// import default states
 import comments from './data/comments';
 import posts from './data/posts';
 
@@ -13,7 +13,6 @@ const defaultState = {
   comments,
 };
 
-const history = createBrowserHistory();
-const store = createStore(rootReducer(history), defaultState);
+const store = createStore(rootReducer, defaultState);
 
 export default store;

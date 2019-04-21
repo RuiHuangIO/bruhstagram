@@ -4,13 +4,16 @@ const webpack = require('webpack');
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry: ['./src/index'],
+  entry: ['webpack-hot-middleware/client', './src/index'],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/static/',
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
   optimization: {
     noEmitOnErrors: true,
   },
