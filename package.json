@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "connected-react-router": "^6.3.2",
+    "expect": "^24.7.1",
     "express": "^4.16.4",
     "history": "^4.9.0",
     "prop-types": "^15.7.2",
